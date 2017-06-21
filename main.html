@@ -1,1 +1,119 @@
+<html>
 
+	<head>
+	
+		<title>CliqueHub</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<style type="text/css">
+		
+			.navbar {
+				background-color:#00b300;
+				vertical-align: middle;
+				height:90px;
+			}
+			
+			#group-search-bar {
+				width:400px;
+				height:40px;
+			}
+			
+			.navbar-text {
+				color:#0080ff;
+				font-size:130%;
+			}
+			
+			#second-tab {
+				display:none;
+			}
+			
+			#third-tab {
+				color:#0080ff;
+			}
+			
+			#navbar-dropdown {
+				display:none;
+			}
+			
+			.btn {
+				background-color:#00b300;
+				border-color:#00b300;
+			}
+		</style>
+		
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	
+	<body>
+	
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="1_Primary_logo_on_transparent_174x69.png">		
+					</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<div class="navbar-text">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div id="second-tab" class="navbar-text">
+							<a href="#">Notifications</a>
+						</div>
+					</li>
+					<li>
+						<div id="third-tab" class="navbar-text">
+							<a href="#">Login</a>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<button id="navbar-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Help</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<script type="text/javascript">
+		
+			var loggedIn = false; //default value
+			
+			if(loggedIn == true) {
+				document.getElementById("second-tab").style.display = "inline";
+				document.getElementById("third-tab").innerHTML = "My Profile";
+				document.getElementById("navbar-dropdown").style.display = "inline";
+			}
+			
+			function loginOrLogout() {
+					loggedIn = !loggedIn;
+			}
+		
+		</script>
+	
+	</body>
+	
+</html>
