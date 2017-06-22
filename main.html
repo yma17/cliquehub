@@ -43,6 +43,24 @@
 				background-color:#00b300;
 				border-color:#00b300;
 			}
+			
+			#search-icon {
+				width:40px;
+				height:40px;
+			}
+			
+			#logged-in-homepage {
+				display:none;
+			}
+			
+			#logged-out-homepage {
+				display:inline;
+			}
+			
+			.jumbotron {
+				background-color:#0080ff;
+				border-radius:25px;
+			}
 		</style>
 		
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -65,6 +83,9 @@
 						&nbsp;
 						&nbsp;
 						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+					</li>
+					<li>
+						<a href="#"><img id="search-icon" src="search_icon.png"></a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -98,14 +119,45 @@
 			</div>
 		</nav>
 		
+		<div class="container-fluid">
+		
+			<div id="logged-out-homepage" class="row">
+				<div class="jumbotron">
+					<h1>Welcome to CliqueHub!</h1> 
+					<p>Form groups, talk to others, and meet others!</p> 
+				</div>
+				
+				<div class="col-sm-4" style="background-color:white;">
+					(feature description here)
+				</div>
+				<div class="col-sm-4" style="background-color:white;">
+					(feature description here)
+				</div>
+				<div class="col-sm-4" style="background-color:white;">
+					(feature description here)
+				</div>
+			</div>
+		
+			<div id="logged-in-homepage" class="row">
+				<div class="col-sm-3" style="background-color:#0080ff;">
+					<h1>Recent Posts</h1>
+				</div>
+				<div class="col-sm-9" style="background-color:white;">
+					<h1>My Groups</h1>
+				</div>
+			</div>
+		</div>
+		
 		<script type="text/javascript">
 		
-			var loggedIn = false; //default value
+			var loggedIn = true; //default value
 			
 			if(loggedIn == true) {
 				document.getElementById("second-tab").style.display = "inline";
 				document.getElementById("third-tab").innerHTML = "My Profile";
 				document.getElementById("navbar-dropdown").style.display = "inline";
+				document.getElementById("logged-out-homepage").style.display = "none";
+				document.getElementById("logged-in-homepage").style.display = "inline";
 			}
 			
 			function loginOrLogout() {
