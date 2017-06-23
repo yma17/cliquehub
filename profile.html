@@ -49,17 +49,17 @@
 				height:40px;
 			}
 			
-			#logged-in-homepage {
-				display:none;
+			.crop img {
+				width:300px;
+				height:300px;
 			}
 			
-			#logged-out-homepage {
-				display:inline;
+			.col-sm-4 {
+				text-align:center;
 			}
 			
-			.jumbotron {
-				background-color:#0080ff;
-				border-radius:25px;
+			.col-sm-8 {
+				text-align:left;
 			}
 		</style>
 		
@@ -121,29 +121,25 @@
 		
 		<div class="container-fluid">
 		
-			<div id="logged-out-homepage" class="row">
-				<div class="jumbotron">
-					<h1>Welcome to CliqueHub!</h1> 
-					<p>Form groups, talk to others, and meet others!</p> 
-				</div>
+			<div id="logged-out" class="row">
 				
-				<div class="col-sm-4" style="background-color:#f2f2f2;">
-					(feature description here)
-				</div>
-				<div class="col-sm-4" style="background-color:#f2f2f2;">
-					(feature description here)
-				</div>
-				<div class="col-sm-4" style="background-color:#f2f2f2;">
-					(feature description here)
-				</div>
 			</div>
 		
-			<div id="logged-in-homepage" class="row">
-				<div class="col-sm-3" style="background-color:#0080ff;">
-					<h1>Recent Posts</h1>
+			<div id="logged-in" class="row">
+				<div class="col-sm-4" style="background-color:#f2f2f2;">
+					<div class="crop">
+						<img src="member2.jfif" alt="profilepic">
+					</div>
+					<br>
+					<h1>Firstname Lastname</h1>
+					<h4>Blanket Groups Joined | Total Groups Joined</h4>
+					<p>Insert bio here.</p>
+					<br>
+					<button style="height:60px;width:150px" type="button"><h4>Follow</h4></button>
+					<button style="height:60px;width:150px" type="button"><h4>Message</h4></button>
 				</div>
-				<div class="col-sm-9" style="background-color:#f2f2f2;">
-					<h1>My Groups</h1>
+				<div class="col-sm-8" style="background-color:#0080ff;">
+					Groups here
 				</div>
 			</div>
 		</div>
@@ -156,8 +152,8 @@
 				document.getElementById("second-tab").style.display = "inline";
 				document.getElementById("third-tab").innerHTML = "My Profile";
 				document.getElementById("navbar-dropdown").style.display = "inline";
-				document.getElementById("logged-out-homepage").style.display = "none";
-				document.getElementById("logged-in-homepage").style.display = "inline";
+				document.getElementById("logged-out").style.display = "none";
+				document.getElementById("logged-in").style.display = "inline";
 			}
 			
 			function loginOrLogout() {

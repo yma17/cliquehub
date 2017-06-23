@@ -1,0 +1,362 @@
+<html>
+
+	<head>
+	
+		<title>CliqueHub</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<style type="text/css">
+		
+			.navbar {
+				background-color:#00b300;
+				vertical-align: middle;
+				height:90px;
+			}
+			
+			#group-search-bar {
+				width:400px;
+				height:40px;
+			}
+			
+			.navbar-text {
+				color:#0080ff;
+				font-size:130%;
+			}
+			
+			#second-tab {
+				display:none;
+			}
+			
+			#third-tab {
+				color:#0080ff;
+			}
+			
+			#navbar-dropdown {
+				display:none;
+			}
+			
+			.btn {
+				background-color:#00b300;
+				border-color:#00b300;
+			}
+			
+			#search-icon {
+				width:40px;
+				height:40px;
+			}
+			
+			#group-not-visible {
+				display:none;
+			}
+			
+			#group-visible {
+				display:inline;
+			}
+			
+			.top-corner-picture {
+				width:300px;
+			}
+			
+			.col-sm-3 {
+				text-align:center;
+			}
+			.col-sm-6 {
+				text-align:center;
+			}
+
+			.carousel-inner img {
+				margin:auto;
+			}
+
+			.crop img {
+				width:100px;
+				height:100px;
+				float:left;
+				margin: 0 0 10px 10px;
+			}
+			
+
+		</style>
+		
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	
+	<body>
+	
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="main.html">
+						<img src="1_Primary_logo_on_transparent_174x69.png">		
+					</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+					</li>
+					<li>
+						<a href="#"><img id="search-icon" src="search_icon.png"></a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<div class="navbar-text">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div id="second-tab" class="navbar-text">
+							<a href="#">Notifications</a>
+						</div>
+					</li>
+					<li>
+						<div id="third-tab" class="navbar-text">
+							<a href="#">Login</a>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<button id="navbar-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Help</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+		
+			<div id="group-not-visible" class="row">
+				
+			</div>
+		
+			<div id="group-visible" class="row">
+				<div class="col-sm-3" style="background-color:#0080ff;">
+					<br>
+					<br>
+					<br>
+					<img id="top-left-picture" class="top-corner-picture" src="insert_image_here.png">
+					<br>
+					<br>
+					<br>
+				</div>
+				
+				<div class="col-sm-6" style="background-color:#f2f2f2;">
+				
+				
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+						</ol>
+
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
+									<img id="carousel1" class="img-responsive center-block" src="people1.jfif" alt="Photo1">
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
+									<img id="carousel2" class="img-responsive center-block" src="people2.png" alt="Photo2">
+								</div>
+							</div>
+						</div>
+
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					
+					<h1>Group Name</h1>
+					
+				</div>
+				
+				<div class="col-sm-3" style="background-color:#0080ff;">
+					<br>
+					<br>
+					<br>
+					<img id="top-right-picture" class="top-corner-picture" src="insert_image_here.png">
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="container-fluid">
+		
+			<div id="group-not-visible" class="row">
+				
+			</div>
+		
+			<div id="group-visible" class="row">
+				<div class="col-sm-3" style="background-color:#00b300;">
+					<br>
+					<p>This is a description.</p>
+					<br>
+					<p>Insert search bar here.</p>
+					<br>
+					<p>Members:</p>
+					<div class="crop">
+						<img src="member1.png" alt="member1">
+					</div>
+					<div class="crop">
+						<img src="member2.jfif" alt="member2">
+					</div>
+					<div class="crop">
+						<img src="member3.png" alt="member3">
+					</div>
+					<div class="crop">
+						<img src="member1.png" alt="member4">
+					</div>
+					<div class="crop">
+						<img src="member2.jfif" alt="member5">
+					</div>
+					<div class="crop">
+						<img src="member3.png" alt="member6">
+					</div>
+				</div>
+				
+				<div class="col-sm-6" style="background-color:#0080ff;">
+					Insert posts here.
+				</div>
+				
+				<div class="col-sm-3" style="background-color:#00b300;">
+					<br>
+					Supergroup:
+					<img src="supergroup.jfif" alt="supergroup">
+					<br>
+					<br>
+					Subgroups:
+					<div class="crop">
+						<img src="subgroup1.jfif" alt="subgroup">
+					</div>
+					<div class="crop">
+						<img src="subgroup2.jfif" alt="subgroup">
+					</div>
+					<div class="crop">
+						<img src="subgroup3.jfif" alt="subgroup">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			var loggedIn = false; //default value
+			
+			if(loggedIn == true) {
+				document.getElementById("second-tab").style.display = "inline";
+				document.getElementById("third-tab").innerHTML = "My Profile";
+				document.getElementById("navbar-dropdown").style.display = "inline";
+				document.getElementById("logged-out-homepage").style.display = "none";
+				document.getElementById("logged-in-homepage").style.display = "inline";
+			}
+			
+			function loginOrLogout() {
+				loggedIn = !loggedIn;
+			}
+		
+			var groupVisible = true; //default value
+			
+			if(groupVisible = false) {
+				document.getElementById("group-visible").style.display = "none";
+				document.getElementById("group-not-visible").style.display = "inline";
+			}
+			
+			//group variables
+			var groupType = 1; //1 = public, 2 = unlisted, 3 = private
+			var numPosts = 0;
+			var numMembers = 0;
+			var description = 'This is a default description.';
+			var numEvents = 0;
+			var numPhotos = 0;
+			var numVideos = 0;
+			var numFiles = 0;
+
+					
+				var images1 = [document.getElementById("top-left-picture").id,document.getElementById("top-right-picture").id];
+				for (var i = 0; i < images1.length; i++) {
+					maximizeImage(images1[i],300,300);
+				}
+				
+				var images2 = [document.getElementById("carousel1").id,document.getElementById("carousel2").id];
+				for (var i = 0; i < images2.length; i++) {
+					maximizeImage(images2[i],700,350);
+				}	
+		
+			
+			/*
+			var numImages = 0;
+			
+			var img = document.createElement('img');
+				img.onload = function() {
+					console.log(numImages);
+					img.src = file.url;
+					
+					numImages++;
+					
+					if(numImages <= 2) {
+						maximizeImage(img.id,300,300);
+					}
+					else {
+						maximizeImage(img.id,350,700);
+					}
+				}
+			*/
+
+			function maximizeImage(id, maxWidth, maxHeight) {
+				var initWidth = document.getElementById(id).offsetWidth;
+				var initHeight = document.getElementById(id).offsetHeight;
+			
+				console.log(id + " width: " + initWidth);
+				console.log(id + " height: " + initHeight);
+			
+				var widthRatio = maxWidth / initWidth;
+				var heightRatio = maxHeight / initHeight;
+				
+				var newWidth;
+				var newHeight;
+				if(widthRatio <= heightRatio) {
+					newWidth = initWidth * widthRatio;
+					newHeight = initHeight * widthRatio;
+				}
+				else {
+					newWidth = initWidth * heightRatio;
+					newHeight = initHeight * heightRatio;
+				}
+				
+				document.getElementById(id).style.width = newWidth;
+				document.getElementById(id).style.height = newHeight;
+				
+				console.log(id + " new width: " + document.getElementById(id).offsetWidth);
+				console.log(id + " new height: " + document.getElementById(id).offsetHeight);
+			}
+			
+		</script>
+	
+	</body>
+	
+</html>
