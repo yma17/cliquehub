@@ -137,6 +137,56 @@
 			p {
 				font-size:95%;
 			}
+			
+			input[type=text]:focus {
+				width:100%;
+			}
+			
+			#myModal {
+				text-align:left;
+			}
+			
+			.modal-btn {
+				background-color:#0080ff;
+				color:#f2f2f2;
+			}
+			#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a.header {
+    background-color: #e2e2e2; /* Add a darker background color for headers */
+    cursor: default; /* Change cursor style */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
 		</style>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -146,6 +196,7 @@
 	
 	<body>
 	
+		//navigation bar on top of page
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -206,6 +257,7 @@
 					<br>
 					<br>
 					<br>
+					<!-- //square-shaped picture on top left -->
 					<img id="top-left-picture" class="top-corner-picture" src="insert_image_here.png">
 					<br>
 					<br>
@@ -214,7 +266,7 @@
 				
 				<div id="top-center" class="col-sm-6" style="background-color:#f2f2f2;">
 				
-				
+					<!-- //carousel of cover photos and group name on top center -->
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -253,6 +305,7 @@
 					<br>
 					<br>
 					<br>
+					<!-- //square-shaped picture on top right -->
 					<img id="top-right-picture" class="top-corner-picture" src="insert_image_here.png">
 					<br>
 					<br>
@@ -268,13 +321,44 @@
 				
 			</div>
 		
-			<div id="group-visible" class="row">
-
+			<div id="group-visible" class="row"> 
+				<!-- //description, search bar, and icons of members on bottom left -->
 				<div class="col-sm-3" style="background-color:#00b300;">
 					<br>
 					<p>This is a description.</p>
 					<br>
-					<p>Insert search bar here.</p>
+					
+  <button type="button" class="btn modal-btn hbtn-info btn-lg" data-toggle="modal" data-target="#myModal">Search for group content</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Search for group content</h4>
+        </div>
+        <div class="modal-body">
+		<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></p>
+          <ul id="myUL">
+  <li><a id="member1" href="#"></a></li>
+  <li><a id="member2" href="#"></a></li>
+  <li><a id="member3" href="#"></a></li>
+  <li><a id="member4" href="#"></a></li>
+  <li><a id="member5" href="#"></a></li>
+  <li><a id="member6" href="#"></a></li>
+  
+</ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 					<br>
 					<h5>Members:</h5>
 					<div class="member">
@@ -309,6 +393,7 @@
 					</div>
 				</div>			
 				
+				<!-- //posts on bottom center -->
 				<div id="bottom-center" class="col-sm-6" style="background-color:#0080ff;">
 					<br>
 					<div class="well">
@@ -376,6 +461,7 @@
 					</div>
 				</div>
 				
+				<!-- //icons of supergroup, subgroups on bottom right -->
 				<div class="col-sm-3" style="background-color:#00b300;">
 					<br>
 					<h5>Supergroup:</h5>
@@ -409,10 +495,27 @@
 		
 		<script type="text/javascript">
 			
+			var names = ["Alex B.","Bob C.","Cindy A.","Adele M.","Billy N.","Calvin O."];
+			
 			$(document).ready(function(){
 				$('[data-toggle="tooltip"]').tooltip({
 					placement: "bottom",
 				});   
+				
+				for(var i = 1; i <= names.length; i++) {
+					var myId = "#" + "member" + i;
+					
+					console.log(myId);
+					$(myId).html(names[i-1]);  
+				}
+				
+				$("[data-toggle=tooltip]").mouseenter(function () {
+					for(var i = 1; i <= names.length; i++) {
+						var myId = "#" + "member" + i;
+				
+						$(myId).attr('data-original-title', names[i-1]);
+					}
+				});
 			});
 			
 			var loggedIn = true; //default value
@@ -503,6 +606,32 @@
 				
 				console.log(id + " new width: " + document.getElementById(id).offsetWidth);
 				console.log(id + " new height: " + document.getElementById(id).offsetHeight);
+			}
+			
+			function myFunction() {
+				/*
+				// Declare variables
+				var input, filter, ul, li, a, i;
+				input = document.getElementById('myInput');
+				filter = input.value.toUpperCase();
+				ul = document.getElementById("myUL");
+				li = ul.getElementsByTagName('li');
+				*/
+				var input, filter, ul, li, a, i;
+				input = document.getElementById('myInput');
+				filter = input.value.toUpperCase();
+				ul = document.getElementById("myUL");
+
+				// Loop through all list items, and hide those who don't match the search query
+				for (var i = 0; i < names.length; i++) {
+					a = names[i].getElementsByTagName("a")[0];
+					if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						names[i].style.display = "";
+					} 
+					else {
+						names[i].style.display = "none";
+					}
+				}
 			}
 			
 		</script>
