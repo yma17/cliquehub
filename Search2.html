@@ -1,0 +1,11 @@
+<script>
+function redirect() {
+    document.location.href = '/browse/' + document.getElementById('search').value;
+    return false;
+}
+</script>
+
+<form onsubmit="return redirect();">
+<input id="search" type="text" />
+<input type="submit" value="Search">
+</form>
