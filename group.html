@@ -74,6 +74,10 @@
 				text-align:left;
 			}
 
+			.carousel.inner > .item > img {
+				margin: 0 auto;
+			}
+			
 			.carousel-inner img {
 				margin:auto;
 			}
@@ -196,7 +200,7 @@
 	
 	<body>
 	
-		//navigation bar on top of page
+		<!-- //navigation bar on top of page -->
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -276,13 +280,13 @@
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
-									<img id="carousel1" class="img-responsive center-block" src="people1.jfif" alt="Photo1">
+									<img id="carousel2" class="img-responsive center-block" src="people2.png" alt="Photo2">
 								</div>
 							</div>
-
+						
 							<div class="item">
 								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
-									<img id="carousel2" class="img-responsive center-block" src="people2.png" alt="Photo2">
+									<img id="carousel1" class="img-responsive center-block" src="people1.jfif" alt="Photo1">
 								</div>
 							</div>
 						</div>
@@ -343,12 +347,12 @@
         <div class="modal-body">
 		<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></p>
           <ul id="myUL">
-  <li><a id="member1" href="#"></a></li>
-  <li><a id="member2" href="#"></a></li>
-  <li><a id="member3" href="#"></a></li>
-  <li><a id="member4" href="#"></a></li>
-  <li><a id="member5" href="#"></a></li>
-  <li><a id="member6" href="#"></a></li>
+  <li><a class="nameinsearch1" href="#"></a></li>
+  <li><a class="nameinsearch2" href="#name2"></a></li>
+  <li><a class="nameinsearch3" href="#"></a></li>
+  <li><a class="nameinsearch4" href="#name1"></a></li>
+  <li><a class="nameinsearch5" href="#"></a></li>
+  <li><a class="nameinsearch6" href="#name3"></a></li>
   
 </ul>
         </div>
@@ -362,32 +366,32 @@
 					<br>
 					<h5>Members:</h5>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member1">
+						<a class="nameintooltip1" href="#" data-toggle="tooltip" title="Member1">
 							<img src="member1.png">
 						</a>
 					</div>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member2">
+						<a class="nameintooltip2" href="#" data-toggle="tooltip" title="Member2">
 							<img class="img-responsive"src="member2.jfif" alt="member2">
 						</a>
 					</div>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member3">
+						<a class="nameintooltip3" href="#" data-toggle="tooltip" title="Member3">
 							<img class="img-responsive"src="member3.png" alt="member3">
 						</a>
 					</div>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member4">
+						<a class="nameintooltip4" href="#" data-toggle="tooltip" title="Member4">
 							<img src="member1.png">
 						</a>
 					</div>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member5">
+						<a class="nameintooltip5" href="#" data-toggle="tooltip" title="Member5">
 							<img class="img-responsive"src="member2.jfif" alt="member5">
 						</a>
 					</div>
 					<div class="member">
-						<a href="#" data-toggle="tooltip" title="Member6">
+						<a class="nameintooltip6" href="#" data-toggle="tooltip" title="Member6">
 							<img class="img-responsive"src="member3.png" alt="member6">
 						</a>
 					</div>
@@ -409,7 +413,7 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname1 Lastname1</h5>
+						<h5 id="name1" class="name"></h5>
 						<h6 class="timestamp">Just now</h6>
 						<p></p>
 						<div class="post-content">
@@ -430,7 +434,7 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname2 Lastname2</h5>
+						<h5 id="name2" class="name"></h5>
 						<h6 class="timestamp">2 min ago</h6>
 						<br>
 						<div class="post-content">
@@ -452,11 +456,13 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname3 Lastname3</h5>
+						<h5 id="name3" class="name"></h5>
 						<h6 class="timestamp">4 min ago</h6>
 						<br>
 						<div class="post-content">
-							<iframe src="https://www.youtube.com/embed/uPvARJW_iVI"></iframe>
+							Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
+But, in a larger sense, we can not dedicate—we can not consecrate—we can not hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion—that we here highly resolve that these dead shall not have died in vain—that this nation, under God, shall have a new birth of freedom—and that government of the people, by the people, for the people, shall not perish from the earth.
 						</div>
 					</div>
 				</div>
@@ -502,20 +508,34 @@
 					placement: "bottom",
 				});   
 				
-				for(var i = 1; i <= names.length; i++) {
-					var myId = "#" + "member" + i;
+				var h;
+				var l0 = names.length;
+				for(h = 1; h <= l0; h++) {
 					
-					console.log(myId);
-					$(myId).html(names[i-1]);  
+					var nameInSearch = "." + "nameinsearch" + h.toString();
+					var nameInTooltip = "." + "nameintooltip" + h.toString();
+					
+					$(nameInTooltip).attr("data-original-title",names[h-1]);
+					$(nameInSearch).html(names[h-1]);  
 				}
 				
-				$("[data-toggle=tooltip]").mouseenter(function () {
-					for(var i = 1; i <= names.length; i++) {
-						var myId = "#" + "member" + i;
+				$("#name1").html(names[3]);
+				$("#name2").html(names[1]);
+				$("#name3").html(names[5]);
 				
-						$(myId).attr('data-original-title', names[i-1]);
-					}
-				});
+				var images1 = [document.getElementById("top-left-picture").id,document.getElementById("top-right-picture").id];
+				var i;
+				var l1 = images1.length;
+				for (i = 0; i < l1; i++) {
+					maximizeImage(images1[i],300,300);
+				}
+				
+				var images2 = [document.getElementById("carousel1").id,document.getElementById("carousel2").id];
+				var j;
+				var l2 = images2.length;
+				for (j = 0; j < l2; j++) {
+					maximizeImage(images2[j],700,350);
+				}	
 			});
 			
 			var loggedIn = true; //default value
@@ -524,8 +544,8 @@
 				document.getElementById("second-tab").style.display = "inline";
 				document.getElementById("third-tab").innerHTML = "My Profile";
 				document.getElementById("navbar-dropdown").style.display = "inline";
-				document.getElementById("logged-out-homepage").style.display = "none";
-				document.getElementById("logged-in-homepage").style.display = "inline";
+				document.getElementById("group-not-visible").style.display = "none";
+				document.getElementById("group-visible").style.display = "inline";
 			}
 			
 			function loginOrLogout() {
@@ -548,17 +568,6 @@
 			var numPhotos = 0;
 			var numVideos = 0;
 			var numFiles = 0;
-
-					
-				var images1 = [document.getElementById("top-left-picture").id,document.getElementById("top-right-picture").id];
-				for (var i = 0; i < images1.length; i++) {
-					maximizeImage(images1[i],300,300);
-				}
-				
-				var images2 = [document.getElementById("carousel1").id,document.getElementById("carousel2").id];
-				for (var i = 0; i < images2.length; i++) {
-					maximizeImage(images2[i],700,350);
-				}	
 		
 			
 			/*
@@ -584,9 +593,6 @@
 				var initWidth = document.getElementById(id).offsetWidth;
 				var initHeight = document.getElementById(id).offsetHeight;
 			
-				console.log(id + " width: " + initWidth);
-				console.log(id + " height: " + initHeight);
-			
 				var widthRatio = maxWidth / initWidth;
 				var heightRatio = maxHeight / initHeight;
 				
@@ -603,9 +609,6 @@
 				
 				document.getElementById(id).style.width = newWidth;
 				document.getElementById(id).style.height = newHeight;
-				
-				console.log(id + " new width: " + document.getElementById(id).offsetWidth);
-				console.log(id + " new height: " + document.getElementById(id).offsetHeight);
 			}
 			
 			function myFunction() {
@@ -621,15 +624,16 @@
 				input = document.getElementById('myInput');
 				filter = input.value.toUpperCase();
 				ul = document.getElementById("myUL");
+				li = ul.getElementsByTagName('li');
 
 				// Loop through all list items, and hide those who don't match the search query
 				for (var i = 0; i < names.length; i++) {
-					a = names[i].getElementsByTagName("a")[0];
-					if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-						names[i].style.display = "";
+					a = names[i];
+					if (a.toUpperCase().indexOf(filter) > -1) {
+						li[i].style.display = "";
 					} 
 					else {
-						names[i].style.display = "none";
+						li[i].style.display = "none";
 					}
 				}
 			}
