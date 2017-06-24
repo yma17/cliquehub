@@ -39,7 +39,7 @@
 				display:none;
 			}
 			
-			.btn {
+			.no-text-btn {
 				background-color:#00b300;
 				border-color:#00b300;
 			}
@@ -60,6 +60,53 @@
 			.jumbotron {
 				background-color:#0080ff;
 				border-radius:25px;
+			}
+			
+			.profilepic img {
+				float:left;
+				width:55px;
+				height:55px;
+				margin: 0 10px 10px 0;
+			}
+			
+			.post-dropdown {
+				float:right;
+			}
+			
+			.group-icon {
+				width:18.84%;
+				float:left;
+				margin: 0 0 10px 10px;
+			}
+			
+			.group-photo {
+				width:100%;
+			}
+			
+			.tooltip {
+				text-align:left;
+				font-size:20px;
+				width:120px;
+			}
+			
+			.photo-in-dropdown {
+				width:100px;
+			}
+			
+			.well {
+				text-align:left;
+			}
+		
+			h6 {
+				font-size:80%;
+			}
+			
+			p {
+				font-size:95%;
+			}
+			
+			.group-dropdown {
+				text-align:right;
 			}
 		</style>
 		
@@ -106,7 +153,7 @@
 					</li>
 					<li>
 						<div class="dropdown">
-							<button id="navbar-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+							<button id="navbar-dropdown" class="btn no-text-btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 							<span class="caret"></span></button>
 							<ul class="dropdown-menu">
 								<li><a href="#">Settings</a></li>
@@ -141,16 +188,132 @@
 			<div id="logged-in-homepage" class="row">
 				<div class="col-sm-3" style="background-color:#0080ff;">
 					<h1>Recent Posts</h1>
+					<div class="well">
+						<div class="profilepic">
+							<img src="member1.png" alt="profilepic1">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname1 Lastname1</h5>
+						<h6 class="timestamp">Just now</h6>
+						<p></p>
+						<div class="post-content">
+							<p>Remember, XX is happening at 7:30pm tonight! Be there! :D</p>
+						</div>
+					</div>
+					
+					<div class="well">
+						<div class="profilepic">
+							<img src="member2.jfif" alt="profilepic2">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname2 Lastname2</h5>
+						<h6 class="timestamp">2 min ago</h6>
+						<br>
+						<div class="post-content">
+							<p>XXers Unite!!</p>
+							<img src="supergroup.jfif">
+						</div>
+					</div>
+					
+					<div class="well">
+						<div class="profilepic">
+							<img src="member3.png" alt="profilepic3">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname3 Lastname3</h5>
+						<h6 class="timestamp">4 min ago</h6>
+						<br>
+						<div class="post-content">
+							<iframe src="https://www.youtube.com/embed/uPvARJW_iVI"></iframe>
+						</div>
+					</div>
 				</div>
+				
 				<div class="col-sm-9" style="background-color:#f2f2f2;">
 					<h1>My Groups</h1>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="Sample Group 1">
+							<img class="group-photo" src="groupofpeople.png">
+						</a>
+					</div>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="Sample Group 2 ">
+							<img class="group-photo" src="groupofpeople.png">
+						</a>
+					</div>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="Sample Group 3">
+							<img class="group-photo" src="groupofpeople.png">
+						</a>
+					</div>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="Sample Group 4">
+							<img class="group-photo" src="groupofpeople.png">
+						</a>
+					</div>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="Sample Group 5">
+							<img class="group-photo" src="groupofpeople.png">
+						</a>
+					</div>
+					<div class="group-icon well">
+						<a href="#" data-toggle="tooltip" title="University of Michigan">
+							<img class="group-photo" src="umich.png">
+						</a>
+						<div class="dropdown group-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#" data-toggle="tooltip" title="Central Campus">
+										<img class="photo-in-dropdown" src="umich_central.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="tooltip" title="North Campus">
+										<img class="photo-in-dropdown" src="umich_north.jfif">
+									</a>
+								</li>
+							</ul>
+						</div>	
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		<script type="text/javascript">
 		
-			var loggedIn = false; //default value
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip({
+					placement: "bottom",
+				});   
+			});
+		
+			var loggedIn = true; //default value
 			
 			if(loggedIn == true) {
 				document.getElementById("second-tab").style.display = "inline";

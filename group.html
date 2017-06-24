@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		
 		<style type="text/css">
+
 		
 			.navbar {
 				background-color:#00b300;
@@ -39,7 +40,7 @@
 				display:none;
 			}
 			
-			.btn {
+			.no-text-btn {
 				background-color:#00b300;
 				border-color:#00b300;
 			}
@@ -64,26 +65,82 @@
 			.col-sm-3 {
 				text-align:center;
 			}
-			.col-sm-6 {
+			
+			#top-center {
 				text-align:center;
+			}
+			
+			#bottom-center {
+				text-align:left;
 			}
 
 			.carousel-inner img {
 				margin:auto;
 			}
 
-			.crop img {
+			.profilepic img {
+				width:55px;
+				height:55px;
+				float:left;
+				margin: 0 10px 10px 0;
+			}
+			
+			.member img {
 				width:100px;
 				height:100px;
 				float:left;
 				margin: 0 0 10px 10px;
 			}
 			
+			.subgroup img {
+				width:100px;
+				float:left;
+				margin: 0 0 10px 10px;
+			}
+			
+			.post-dropdown {
+				float:right;
+			}
+			
+			.group-icon {
+				width:18.84%;
+				float:left;
+				margin: 0 0 10px 10px;
+			}
+			
+			.group-photo {
+				width:100%;
+			}
+			
+			.tooltip {
+				text-align:left;
+				font-size:20px;
+				width:120px;
+			}
+			
+			.photo-in-dropdown {
+				width:100px;
+			}
+			
+			.group-dropdown {
+				text-align:right;
+			}
 
+			.supergroup {
+				width:300px;
+			}
+			
+			h6 {
+				font-size:80%;
+			}
+			
+			p {
+				font-size:95%;
+			}
 		</style>
 		
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
 	</head>
 	
@@ -110,7 +167,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<div class="navbar-text">
-							<a href="#">Home</a>
+							<a href="main.html">Home</a>
 						</div>
 					</li>
 					<li>
@@ -125,7 +182,7 @@
 					</li>
 					<li>
 						<div class="dropdown">
-							<button id="navbar-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+							<button id="navbar-dropdown" class="btn no-text-btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 							<span class="caret"></span></button>
 							<ul class="dropdown-menu">
 								<li><a href="#">Settings</a></li>
@@ -155,7 +212,7 @@
 					<br>
 				</div>
 				
-				<div class="col-sm-6" style="background-color:#f2f2f2;">
+				<div id="top-center" class="col-sm-6" style="background-color:#f2f2f2;">
 				
 				
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -212,60 +269,153 @@
 			</div>
 		
 			<div id="group-visible" class="row">
+
 				<div class="col-sm-3" style="background-color:#00b300;">
 					<br>
 					<p>This is a description.</p>
 					<br>
 					<p>Insert search bar here.</p>
 					<br>
-					<p>Members:</p>
-					<div class="crop">
-						<img src="member1.png" alt="member1">
+					<h5>Members:</h5>
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member1">
+							<img src="member1.png">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="member2.jfif" alt="member2">
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member2">
+							<img class="img-responsive"src="member2.jfif" alt="member2">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="member3.png" alt="member3">
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member3">
+							<img class="img-responsive"src="member3.png" alt="member3">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="member1.png" alt="member4">
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member4">
+							<img src="member1.png">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="member2.jfif" alt="member5">
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member5">
+							<img class="img-responsive"src="member2.jfif" alt="member5">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="member3.png" alt="member6">
+					<div class="member">
+						<a href="#" data-toggle="tooltip" title="Member6">
+							<img class="img-responsive"src="member3.png" alt="member6">
+						</a>
 					</div>
-				</div>
+				</div>			
 				
-				<div class="col-sm-6" style="background-color:#0080ff;">
-					Insert posts here.
+				<div id="bottom-center" class="col-sm-6" style="background-color:#0080ff;">
+					<br>
+					<div class="well">
+						<div class="profilepic">
+							<img src="member1.png" alt="profilepic1">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname1 Lastname1</h5>
+						<h6 class="timestamp">Just now</h6>
+						<p></p>
+						<div class="post-content">
+							<p>Remember, XX is happening at 7:30pm tonight! Be there! :D</p>
+						</div>
+					</div>
+					
+					<div class="well">
+						<div class="profilepic">
+							<img src="member2.jfif" alt="profilepic2">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname2 Lastname2</h5>
+						<h6 class="timestamp">2 min ago</h6>
+						<br>
+						<div class="post-content">
+							<p>XXers Unite!!</p>
+							<img src="supergroup.jfif">
+						</div>
+					</div>
+					
+					<div class="well">
+						<div class="profilepic">
+							<img src="member3.png" alt="profilepic3">
+						</div> 
+						<div class="dropdown post-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Save post</a></li>
+								<li><a href="#">Turn off notifications for this post</a></li>
+								<li><a href="#">Report post to Admin</a></li>
+							</ul>
+						</div>
+						<h5 class="name">Firstname3 Lastname3</h5>
+						<h6 class="timestamp">4 min ago</h6>
+						<br>
+						<div class="post-content">
+							<iframe src="https://www.youtube.com/embed/uPvARJW_iVI"></iframe>
+						</div>
+					</div>
 				</div>
 				
 				<div class="col-sm-3" style="background-color:#00b300;">
 					<br>
-					Supergroup:
-					<img src="supergroup.jfif" alt="supergroup">
+					<h5>Supergroup:</h5>
+					<div class="supergroup">
+						<a href="#" data-toggle="tooltip" title="supergroup">
+							<img class="img-responsive"src="supergroup.jfif" alt="supergroup">
+						</a>
+					</div>
 					<br>
 					<br>
-					Subgroups:
-					<div class="crop">
-						<img src="subgroup1.jfif" alt="subgroup">
+					<h5>Subgroups:</h5>
+					<div class="subgroup">
+						<a href="#" data-toggle="tooltip" title="subgroup1">
+							<img class="img-responsive"src="subgroup1.jfif" alt="subgroup1">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="subgroup2.jfif" alt="subgroup">
+					<div class="subgroup">
+						<a href="#" data-toggle="tooltip" title="subgroup2">
+							<img class="img-responsive"src="subgroup2.jfif" alt="subgroup2">
+						</a>
 					</div>
-					<div class="crop">
-						<img src="subgroup3.jfif" alt="subgroup">
+					<div class="subgroup">
+						<a href="#" data-toggle="tooltip" title="subgroup3">
+							<img class="img-responsive"src="subgroup3.jfif" alt="subgroup3">
+						</a>
 					</div>
 				</div>
+			
 			</div>
 		</div>
 		
 		<script type="text/javascript">
 			
-			var loggedIn = false; //default value
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip({
+					placement: "bottom",
+				});   
+			});
+			
+			var loggedIn = true; //default value
 			
 			if(loggedIn == true) {
 				document.getElementById("second-tab").style.display = "inline";
