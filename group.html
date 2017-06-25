@@ -2,7 +2,7 @@
 
 	<head>
 	
-		<title>CliqueHub</title>
+		<title>Central Campus</title>
 		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,7 +152,7 @@
 			
 			.modal-btn {
 				background-color:#0080ff;
-				color:#f2f2f2;
+				border-color:#f2f2f2;
 			}
 			#myInput {
     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -213,7 +213,10 @@
 						&nbsp;
 						&nbsp;
 						&nbsp;
-						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+						<form onsubmit="return redirect();">
+<input placeholder="Search for groups..." id="search" type="text" />
+<input type="submit" value="Search">
+</form>
 					</li>
 					<li>
 						<a href="#"><img id="search-icon" src="search_icon.png"></a>
@@ -262,7 +265,7 @@
 					<br>
 					<br>
 					<!-- //square-shaped picture on top left -->
-					<img id="top-left-picture" class="top-corner-picture" src="insert_image_here.png">
+					<img id="top-left-picture" class="top-corner-picture" src="central_map.jfif">
 					<br>
 					<br>
 					<br>
@@ -275,18 +278,25 @@
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
 						</ol>
 
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
-									<img id="carousel2" class="img-responsive center-block" src="people2.png" alt="Photo2">
+									<img id="carousel1" class="img-responsive center-block" src="umich_central.jpg" alt="Photo1">
 								</div>
 							</div>
 						
 							<div class="item">
 								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
-									<img id="carousel1" class="img-responsive center-block" src="people1.jfif" alt="Photo1">
+									<img id="carousel2" class="img-responsive center-block" src="central_aerial.jfif" alt="Photo2">
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="container" style="display:block;width:700px;height:350px;overflow:hidden;">
+									<img id="carousel3" class="img-responsive center-block" src="quad.jfif" alt="Photo2">
 								</div>
 							</div>
 						</div>
@@ -301,7 +311,7 @@
 						</a>
 					</div>
 					
-					<h1>Group Name</h1>
+					<h1>Central Campus</h1>
 					
 				</div>
 				
@@ -310,7 +320,7 @@
 					<br>
 					<br>
 					<!-- //square-shaped picture on top right -->
-					<img id="top-right-picture" class="top-corner-picture" src="insert_image_here.png">
+					<img id="top-right-picture" class="top-corner-picture" src="a2_location.jfif">
 					<br>
 					<br>
 					<br>
@@ -329,10 +339,10 @@
 				<!-- //description, search bar, and icons of members on bottom left -->
 				<div class="col-sm-3" style="background-color:#00b300;">
 					<br>
-					<p>This is a description.</p>
+					<p>Description: Central Campus of the University of Michigan, located alongside beautiful downtown Ann Arbor, named by Forbes as America's #1 college town.</p>
 					<br>
 					
-  <button type="button" class="btn modal-btn hbtn-info btn-lg" data-toggle="modal" data-target="#myModal">Search for group content</button>
+  <button type="button" class="btn modal-btn hbtn-info btn-lg" data-toggle="modal" data-target="#myModal">Search for people in group</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -342,7 +352,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Search for group content</h4>
+          <h4 class="modal-title">Search for people in group</h4>
         </div>
         <div class="modal-body">
 		<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></p>
@@ -363,6 +373,7 @@
       
     </div>
   </div>
+					<br>
 					<br>
 					<h5>Members:</h5>
 					<div class="member">
@@ -391,8 +402,8 @@
 						</a>
 					</div>
 					<div class="member">
-						<a class="nameintooltip6" href="#" data-toggle="tooltip" title="Member6">
-							<img class="img-responsive"src="member3.png" alt="member6">
+						<a class="nameintooltip6" href="profile.html" data-toggle="tooltip" title="Member6">
+							<img class="img-responsive"src="calvin_o.png" alt="member6">
 						</a>
 					</div>
 				</div>			
@@ -413,9 +424,9 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 id="name1" class="name"></h5>
+						<h5><a id="name1" class="name" href="#"></a></h5>
 						<h6 class="timestamp">Just now</h6>
-						<p></p>
+						<br>
 						<div class="post-content">
 							<p>Remember, XX is happening at 7:30pm tonight! Be there! :D</p>
 						</div>
@@ -434,7 +445,7 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 id="name2" class="name"></h5>
+						<h5><a id="name2" class="name" href="#"></a></h5>
 						<h6 class="timestamp">2 min ago</h6>
 						<br>
 						<div class="post-content">
@@ -445,7 +456,7 @@
 					
 					<div class="well">
 						<div class="profilepic">
-							<img src="member3.png" alt="profilepic3">
+							<img src="calvin_o.png" alt="profilepic3">
 						</div> 
 						<div class="dropdown post-dropdown">
 							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -456,7 +467,7 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 id="name3" class="name"></h5>
+						<h5><a id="name3" class="name" href="profile.html"></a></h5>
 						<h6 class="timestamp">4 min ago</h6>
 						<br>
 						<div class="post-content">
@@ -472,26 +483,25 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
 					<br>
 					<h5>Supergroup:</h5>
 					<div class="supergroup">
-						<a href="#" data-toggle="tooltip" title="supergroup">
-							<img class="img-responsive"src="supergroup.jfif" alt="supergroup">
+						<a href="#" data-toggle="tooltip" title="University of Michigan">
+							<img class="img-responsive"src="umich.png" alt="University of Michigan">
 						</a>
 					</div>
-					<br>
 					<br>
 					<h5>Subgroups:</h5>
 					<div class="subgroup">
-						<a href="#" data-toggle="tooltip" title="subgroup1">
-							<img class="img-responsive"src="subgroup1.jfif" alt="subgroup1">
+						<a href="#" data-toggle="tooltip" title="South Quad">
+							<img class="img-responsive"src="umich_sq.jfif" alt="South Quad">
 						</a>
 					</div>
 					<div class="subgroup">
-						<a href="#" data-toggle="tooltip" title="subgroup2">
-							<img class="img-responsive"src="subgroup2.jfif" alt="subgroup2">
+						<a href="#" data-toggle="tooltip" title="LSA">
+							<img class="img-responsive"src="umich_lsa.png" alt="LSA">
 						</a>
 					</div>
 					<div class="subgroup">
-						<a href="#" data-toggle="tooltip" title="subgroup3">
-							<img class="img-responsive"src="subgroup3.jfif" alt="subgroup3">
+						<a href="#" data-toggle="tooltip" title="Michigan Union">
+							<img class="img-responsive"src="union.jpg" alt="Michigan Union">
 						</a>
 					</div>
 				</div>
@@ -530,13 +540,36 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
 					maximizeImage(images1[i],300,300);
 				}
 				
-				var images2 = [document.getElementById("carousel1").id,document.getElementById("carousel2").id];
+				var images2 = [document.getElementById("carousel1").id,document.getElementById("carousel2").id,document.getElementById("carousel3").id];
 				var j;
 				var l2 = images2.length;
 				for (j = 0; j < l2; j++) {
 					maximizeImage(images2[j],700,350);
 				}	
 			});
+			
+			function maximizeImage(id, maxWidth, maxHeight) {
+				var initWidth = document.getElementById(id).offsetWidth;
+				var initHeight = document.getElementById(id).offsetHeight;
+			
+				var widthRatio = maxWidth / initWidth;
+				var heightRatio = maxHeight / initHeight;
+				
+				var newWidth;
+				var newHeight;
+				if(widthRatio <= heightRatio) {
+					newWidth = initWidth * widthRatio;
+					newHeight = initHeight * widthRatio;
+				}
+				else {
+					newWidth = initWidth * heightRatio;
+					newHeight = initHeight * heightRatio;
+				}
+				
+				document.getElementById(id).style.width = newWidth;
+				document.getElementById(id).style.height = newHeight;
+			}
+			
 			
 			var loggedIn = true; //default value
 			
@@ -588,28 +621,6 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
 					}
 				}
 			*/
-
-			function maximizeImage(id, maxWidth, maxHeight) {
-				var initWidth = document.getElementById(id).offsetWidth;
-				var initHeight = document.getElementById(id).offsetHeight;
-			
-				var widthRatio = maxWidth / initWidth;
-				var heightRatio = maxHeight / initHeight;
-				
-				var newWidth;
-				var newHeight;
-				if(widthRatio <= heightRatio) {
-					newWidth = initWidth * widthRatio;
-					newHeight = initHeight * widthRatio;
-				}
-				else {
-					newWidth = initWidth * heightRatio;
-					newHeight = initHeight * heightRatio;
-				}
-				
-				document.getElementById(id).style.width = newWidth;
-				document.getElementById(id).style.height = newHeight;
-			}
 			
 			function myFunction() {
 				/*
@@ -637,6 +648,11 @@ But, in a larger sense, we can not dedicate—we can not consecrate—we can not
 					}
 				}
 			}
+			
+			function redirect() {
+    document.location.href = '/browse/' + document.getElementById('search').value;
+    return false;
+		}
 			
 		</script>
 	

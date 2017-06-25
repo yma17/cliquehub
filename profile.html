@@ -2,7 +2,7 @@
 
 	<head>
 	
-		<title>CliqueHub</title>
+		<title>Calvin O.</title>
 		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,7 +106,10 @@
 						&nbsp;
 						&nbsp;
 						&nbsp;
-						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+						<form onsubmit="return redirect();">
+<input placeholder="Search for groups..." id="search" type="text" />
+<input type="submit" value="Search">
+</form>
 					</li>
 					<li>
 						<a href="#"><img id="search-icon" src="search_icon.png"></a>
@@ -115,7 +118,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<div class="navbar-text">
-							<a href="#">Home</a>
+							<a href="main.html">Home</a>
 						</div>
 					</li>
 					<li>
@@ -152,12 +155,12 @@
 			<div id="logged-in" class="row">
 				<div class="col-sm-3" style="background-color:#f2f2f2;">
 					<div class="crop">
-						<img src="member2.jfif" alt="profilepic">
+						<img src="calvin_o.png" alt="profilepic">
 					</div>
 					<br>
-					<h1>Firstname Lastname</h1>
-					<h4>Blanket Groups Joined | Total Groups Joined</h4>
-					<p>Insert bio here.</p>
+					<h1>Calvin O.</h1>
+					<h4><a data-toggle="tooltip" title="Blanket Groups Joined">2</a> | <a data-toggle="tooltip" title="Total Groups Joined">9</a></h4>
+					<p>Just your average UMich student</p>
 					<br>
 					<button style="height:60px;width:150px;background-color:#0080ff;" type="button"><h4>Follow</h4></button>
 					<button style="height:60px;width:150px;background-color:#0080ff;" type="button"><h4>Message</h4></button>
@@ -198,7 +201,7 @@
 							<span class="caret"></span></button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#" data-toggle="tooltip" title="Central Campus">
+									<a href="group.html" data-toggle="tooltip" title="Central Campus">
 										<img class="photo-in-dropdown" src="umich_central.jpg">
 									</a>
 								</li>
@@ -208,6 +211,33 @@
 									</a>
 								</li>
 							</ul>
+						</div>	
+					</div>
+					<div class="group-icon well">
+						<a href="group.html" data-toggle="tooltip" title="Central Campus">
+							<img class="group-photo" src="umich_central.jpg">
+						</a>
+						<div class="dropdown group-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#" data-toggle="tooltip" title="South Quad">
+										<img class="photo-in-dropdown" src="umich_sq.jfif">
+									</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="tooltip" title="LSA">
+										<img class="photo-in-dropdown" src="umich_lsa.png">
+									</a>
+								</li>
+						
+								<li>
+									<a href="#" data-toggle="tooltip" title="Michigan Union">
+										<img class="photo-in-dropdown" src="union.jpg">
+									</a>
+								</li>
+								
 						</div>	
 					</div>
 				</div>
@@ -235,6 +265,11 @@
 			function loginOrLogout() {
 					loggedIn = !loggedIn;
 			}
+			
+			function redirect() {
+    document.location.href = '/browse/' + document.getElementById('search').value;
+    return false;
+	}
 		</script>
 	
 	</body>

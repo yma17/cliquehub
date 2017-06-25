@@ -129,7 +129,10 @@
 						&nbsp;
 						&nbsp;
 						&nbsp;
-						<input id="group-search-bar" type="text" name="search" placeholder="Search for groups...">
+						<form onsubmit="return redirect();">
+<input placeholder="Search for groups..." id="search" type="text" />
+<input type="submit" value="Search">
+</form>
 					</li>
 					<li>
 						<a href="#"><img id="search-icon" src="search_icon.png"></a>
@@ -138,7 +141,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<div class="navbar-text">
-							<a href="#">Home</a>
+							<a href="main.html">Home</a>
 						</div>
 					</li>
 					<li>
@@ -201,9 +204,9 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname1 Lastname1</h5>
+						<h5><a id="name1" class="name" href="#">Adele M.</a></h5>
 						<h6 class="timestamp">Just now</h6>
-						<p></p>
+						<br>
 						<div class="post-content">
 							<p>Remember, XX is happening at 7:30pm tonight! Be there! :D</p>
 						</div>
@@ -222,7 +225,7 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname2 Lastname2</h5>
+						<h5><a id="name2" class="name" href="#">Bob C.</a></h5>
 						<h6 class="timestamp">2 min ago</h6>
 						<br>
 						<div class="post-content">
@@ -233,7 +236,7 @@
 					
 					<div class="well">
 						<div class="profilepic">
-							<img src="member3.png" alt="profilepic3">
+							<img src="calvin_o.png" alt="profilepic3">
 						</div> 
 						<div class="dropdown post-dropdown">
 							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -244,11 +247,13 @@
 								<li><a href="#">Report post to Admin</a></li>
 							</ul>
 						</div>
-						<h5 class="name">Firstname3 Lastname3</h5>
+						<h5><a id="name3" class="name" href="profile.html">Calvin O.</a></h5>
 						<h6 class="timestamp">4 min ago</h6>
 						<br>
 						<div class="post-content">
-							<iframe src="https://www.youtube.com/embed/uPvARJW_iVI"></iframe>
+							Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
+But, in a larger sense, we can not dedicate—we can not consecrate—we can not hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion—that we here highly resolve that these dead shall not have died in vain—that this nation, under God, shall have a new birth of freedom—and that government of the people, by the people, for the people, shall not perish from the earth.
 						</div>
 					</div>
 				</div>
@@ -289,7 +294,7 @@
 							<span class="caret"></span></button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#" data-toggle="tooltip" title="Central Campus">
+									<a href="group.html" data-toggle="tooltip" title="Central Campus">
 										<img class="photo-in-dropdown" src="umich_central.jpg">
 									</a>
 								</li>
@@ -299,6 +304,33 @@
 									</a>
 								</li>
 							</ul>
+						</div>	
+					</div>
+					<div class="group-icon well">
+						<a href="group.html" data-toggle="tooltip" title="Central Campus">
+							<img class="group-photo" src="umich_central.jpg">
+						</a>
+						<div class="dropdown group-dropdown">
+							<button class="btn no-text-btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#" data-toggle="tooltip" title="South Quad">
+										<img class="photo-in-dropdown" src="umich_sq.jfif">
+									</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="tooltip" title="LSA">
+										<img class="photo-in-dropdown" src="umich_lsa.png">
+									</a>
+								</li>
+						
+								<li>
+									<a href="#" data-toggle="tooltip" title="Michigan Union">
+										<img class="photo-in-dropdown" src="union.jpg">
+									</a>
+								</li>
+								
 						</div>	
 					</div>
 				</div>
@@ -326,6 +358,11 @@
 			function loginOrLogout() {
 					loggedIn = !loggedIn;
 			}
+			
+			function redirect() {
+    document.location.href = '/browse/' + document.getElementById('search').value;
+    return false;
+}
 		
 		</script>
 	
